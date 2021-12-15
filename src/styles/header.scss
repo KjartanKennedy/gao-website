@@ -1,0 +1,42 @@
+header {
+  background-color: rgba(17, 17, 17, 0.8);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 160px;
+  z-index: 50;
+  transition: background-color 400ms;
+
+  &.scrolled {
+    background-color: #111;
+  }
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.header-scrolled {
+  background-color: #111;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}

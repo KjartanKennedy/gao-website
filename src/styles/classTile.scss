@@ -1,0 +1,17 @@
+.class-tile-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.class-tile-image-overlay {
+  position: relative;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+}

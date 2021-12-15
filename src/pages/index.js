@@ -5,6 +5,23 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Person from "../components/person"
+import ClassTile from "../components/classTile"
+import EmailForm from "../components/emailForm"
+
+import davidFredrick from "../images/team/KjartanKennedy.jpg"
+import kjartanKennedy from "../images/team/KjartanKennedy.jpg"
+import gregRogers from "../images/team/GregRogers.png"
+
+import unityLogo from "../images/companies/U_Logo_Black_RGB.svg"
+import amazonLogo from "../images/companies/Amazon_logo.svg"
+import microsoftLogo from "../images/companies/microsoft.svg"
+import turn10Logo from "../images/companies/Turn10.png"
+import retroLogo from "../images/companies/RetroStudiosLogo.png"
+import armatureLogo from "../images/companies/armature.png"
+import kitBash3DLogo from "../images/companies/kitbash3d.png"
+import tesseractLogo from "../images/companies/Tesseract.svg"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -26,7 +43,8 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <Bio />
+
+      {/* <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -58,7 +76,7 @@ const BlogIndex = ({ data, location }) => {
             </li>
           )
         })}
-      </ol>
+      </ol> */}
     </Layout>
   )
 }

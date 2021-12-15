@@ -1,0 +1,19 @@
+.person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.person-avatar {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+
+  img {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
