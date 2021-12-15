@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from "react"
 
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import "../styles/classTile.scss";
+import "../styles/classTile.css"
 
 const ClassTile = ({
   className,
@@ -12,7 +12,7 @@ const ClassTile = ({
   numSessions,
   description,
 }) => {
-  const hero = getImage(image);
+  const hero = getImage(image)
   return (
     <div class={className + " classTile"}>
       <div
@@ -51,7 +51,7 @@ const ClassTile = ({
       </ul>
       <button>Register</button> */}
     </div>
-  );
-};
+  )
+}
 
-export default ClassTile;
+export default ClassTile

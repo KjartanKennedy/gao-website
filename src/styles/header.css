@@ -7,10 +7,10 @@ header {
   padding: 24px 160px;
   z-index: 50;
   transition: background-color 400ms;
+}
 
-  &.scrolled {
-    background-color: #111;
-  }
+header.scrolled {
+  background-color: #111;
 }
 
 nav a {

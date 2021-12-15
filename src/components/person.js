@@ -1,5 +1,5 @@
-import * as React from "react";
-import "../styles/person.scss";
+import * as React from "react"
+import "../styles/person.css"
 
 const Person = ({ name, image, title, company, className }) => {
   return (
@@ -16,7 +16,7 @@ const Person = ({ name, image, title, company, className }) => {
         <p>{company}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Person;
+export default Person

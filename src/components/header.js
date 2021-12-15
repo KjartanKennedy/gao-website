@@ -1,23 +1,23 @@
-import * as React from "react";
-import "../styles/header.scss";
+import * as React from "react"
+import "../styles/header.css"
 
 class Header extends React.Component {
   componentDidMount() {
-    window.addEventListener("scroll", this.toggleNav);
-    this.toggleNav();
+    window.addEventListener("scroll", this.toggleNav)
+    this.toggleNav()
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.toggleNav);
+    window.removeEventListener("scroll", this.toggleNav)
   }
 
   toggleNav = () => {
     if (window.scrollY < 40) {
-      document.querySelector("header").classList.remove("scrolled");
+      document.querySelector("header").classList.remove("scrolled")
     } else {
-      document.querySelector("header").classList.add("scrolled");
+      document.querySelector("header").classList.add("scrolled")
     }
-  };
+  }
 
   render() {
     return (
@@ -34,8 +34,8 @@ class Header extends React.Component {
           </nav>
         </div>
       </header>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header

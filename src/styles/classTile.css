@@ -10,8 +10,8 @@
 .class-tile-image-overlay {
   position: relative;
   color: #fff;
+}
 
-  a {
-    color: #fff;
-  }
+.class-tile-image-overlay a {
+  color: #fff;
 }

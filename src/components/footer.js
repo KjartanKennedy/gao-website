@@ -1,7 +1,7 @@
-import * as React from "react";
-import "../styles/footer.scss";
+import * as React from "react"
+import "../styles/footer.css"
 
-import EmailForm from "./emailForm";
+import EmailForm from "./emailForm"
 
 const Footer = ({}) => {
   return (
@@ -58,7 +58,7 @@ const Footer = ({}) => {
         <p>©2021 Game Academy of the Ozarks</p>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

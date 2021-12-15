@@ -1,8 +1,3 @@
-$font-stack: Inter, sans-serif;
-$primary-color: #111;
-$text-secondary: #777;
-$emphasis-gradient: linear-gradient(116.36deg, #ba61d0 0%, #111d87 100%);
-
 html {
   scroll-behavior: smooth;
 }
@@ -11,8 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: $font-stack;
-  color: $primary-color;
+  font-family: Inter, sans-serif;
+  color: #111;
   font-size: 14px;
   line-height: 20px;
 }
@@ -32,7 +27,7 @@ h2 {
   font-size: 36px;
   line-height: 44px;
 
-  background: $emphasis-gradient;
+  background: linear-gradient(116.36deg, #ba61d0 0%, #111d87 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -41,11 +36,11 @@ h2 {
 h3 {
   font-size: 18px;
   line-height: 24px;
+}
 
-  &.large {
-    font-size: 24px;
-    line-height: 30px;
-  }
+h3.large {
+  font-size: 24px;
+  line-height: 30px;
 }
 
 h4 {
@@ -69,18 +64,18 @@ h4 {
 }
 
 .text-secondary {
-  color: $text-secondary;
+  color: #777;
+}
 
-  a {
-    color: $text-secondary;
-  }
+.text-secondary a {
+  color: #777;
 }
 
 .emphasis-extreme {
   font-size: 72px;
   line-height: 88px;
   font-weight: 900;
-  background: $emphasis-gradient;
+  background: linear-gradient(116.36deg, #ba61d0 0%, #111d87 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,10 +106,11 @@ section,
   width: 100%;
   margin: 0;
   padding: 80px 160px;
+}
 
-  &.no-padding {
-    padding: 0;
-  }
+section.no-padding,
+.section-wrap.no-padding {
+  padding: 0;
 }
 
 .container {
@@ -131,7 +127,7 @@ section,
   overflow: hidden;
 }
 
-// SPACING
+/* SPACING */
 
 .spacing-x-large {
   margin-bottom: 80px !important;
@@ -157,9 +153,9 @@ section,
   margin-bottom: 4px !important;
 }
 
-// END SPACING
+/* END SPACING */
 
-// PADDING
+/* PADDING */
 
 .padding-medium {
   padding: 24px;
@@ -183,7 +179,7 @@ section,
   padding-right: 40px;
 }
 
-// ASPECT-RATIOS
+/* ASPECT-RATIOS */
 
 .aspect-16-9 {
   aspect-ratio: 16 / 9;
@@ -261,14 +257,14 @@ h2.grid-title,
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   gap: 40px;
+}
 
-  .grid-title {
-    grid-column: 1 / span 2;
-  }
+.classes-grid .grid-title {
+  grid-column: 1 / span 2;
+}
 
-  .grid-content {
-    grid-column-start: span 3;
-  }
+.classes-grid .grid-content {
+  grid-column-start: span 3;
 }
 
 .banner {
@@ -288,22 +284,22 @@ h2.grid-title,
   -webkit-text-fill-color: initial;
 
   max-width: 800px;
+}
 
-  &.large {
-    font-size: 48px;
-    line-height: 58px;
-    max-width: 960px;
-  }
+.banner-heading.large {
+  font-size: 48px;
+  line-height: 58px;
+  max-width: 960px;
 }
 
 aside {
   transform: translateY(-160px);
-  // background-color: #fff;
+  /* // background-color: #fff; */
 
   padding-top: 40px;
   padding-bottom: 40px;
   padding-right: 40px;
-  // margin-right: -40px
+  /* // margin-right: -40px */
 }
 
 aside:after {
@@ -371,14 +367,14 @@ aside:after {
   grid-template-rows: 1fr 1fr;
   column-gap: 16px;
   row-gap: 8px;
+}
 
-  img {
-    height: 24px;
-  }
+.company-logo-list img {
+  height: 24px;
 }
 
 input.email {
-  font-family: $font-stack;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 20px;
   padding: 7px;
@@ -389,20 +385,20 @@ input.email {
   color: #fff;
 
   height: 100%;
+}
 
-  &::placeholder {
-    color: #e2e2e2;
-  }
+input.email::placeholder {
+  color: #e2e2e2;
 }
 
 button {
-  font-family: $font-stack;
+  font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
   padding: 8px 24px;
 
-  background: $emphasis-gradient;
+  background: linear-gradient(116.36deg, #ba61d0 0%, #111d87 100%);
   color: #fff;
 
   border: none;
@@ -419,10 +415,10 @@ button {
 .email-list-column .email-form {
   flex-direction: column;
   align-items: flex-start;
+}
 
-  button {
-    margin: 4px 0px;
-  }
+.email-list-column .email-form button {
+  margin: 4px 0px;
 }
 
 #error,
