@@ -388,6 +388,9 @@ input.email {
 }
 
 input.email::placeholder {
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
   color: #e2e2e2;
 }
 

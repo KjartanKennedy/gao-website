@@ -1,39 +1,39 @@
-import React, { useState } from "react";
-import addToMailchimp from "gatsby-plugin-mailchimp";
+import React, { useState } from "react"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 // import * as styles from './EmailListForm.module.scss';
 
 const EmailForm = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("")
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = e => {
+    e.preventDefault()
 
     addToMailchimp(email)
-      .then((data) => {
+      .then(data => {
         if (data.result == "success") {
-          document.querySelectorAll("#email-form").forEach((element) => {
-            element.style.display = "none";
-          });
-          document.querySelectorAll("#success").forEach((element) => {
-            element.textContent = data.msg;
-            element.style.display = "inline-block";
-          });
+          document.querySelectorAll("#email-form").forEach(element => {
+            element.style.display = "none"
+          })
+          document.querySelectorAll("#success").forEach(element => {
+            element.textContent = data.msg
+            element.style.display = "inline-block"
+          })
         } else {
-          document.querySelectorAll("#error").forEach((element) => {
-            element.textContent = "Error: " + data.msg;
-            element.style.display = "inline-block";
-          });
+          document.querySelectorAll("#error").forEach(element => {
+            element.textContent = "Error: " + data.msg
+            element.style.display = "inline-block"
+          })
         }
       })
-      .catch((e) => {
+      .catch(e => {
         // Errors in here are client side
         // Mailchimp always returns a 200
-      });
-  };
+      })
+  }
 
-  const handleEmailChange = (event) => {
-    setEmail(event.currentTarget.value);
-  };
+  const handleEmailChange = event => {
+    setEmail(event.currentTarget.value)
+  }
 
   return (
     <>
@@ -56,7 +56,7 @@ const EmailForm = () => {
         <p>Thanks for subscribing!</p>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default EmailForm;
+export default EmailForm

@@ -118,6 +118,57 @@ const BlogIndex = ({ data, location }) => {
         </div>
       </section>
 
+      <section id="classes">
+        <div class="container classes-grid">
+          <div class="grid-title">
+            <h2 class="spacing-medium">Classes</h2>
+            <p>
+              Every class is taught by an active industry professional, ensuring
+              that you’re learning skills currently in use by the industry.
+            </p>
+          </div>
+
+          {posts.map(post => {
+            const title = post.frontmatter.title || post.fields.slug
+
+            return (
+              <ClassTile
+                className="grid-content"
+                name={post.frontmatter.title}
+                image={post.frontmatter.hero_image}
+                price={post.frontmatter.price}
+                numSessions={post.frontmatter.numSessions}
+              />
+
+              // <li key={post.fields.slug}>
+              //   <article
+              //     className="post-list-item"
+              //     itemScope
+              //     itemType="http://schema.org/Article"
+              //   >
+              //     <header>
+              //       <h2>
+              //         <Link to={post.fields.slug} itemProp="url">
+              //           <span itemProp="headline">{title}</span>
+              //         </Link>
+              //       </h2>
+              //       <small>{post.frontmatter.date}</small>
+              //     </header>
+              //     <section>
+              //       <p
+              //         dangerouslySetInnerHTML={{
+              //           __html: post.frontmatter.description || post.excerpt,
+              //         }}
+              //         itemProp="description"
+              //       />
+              //     </section>
+              //   </article>
+              // </li>
+            )
+          })}
+        </div>
+      </section>
+
       <section class="no-padding" id="mission">
         <div class="banner" id="mission-banner">
           <div class="container">
@@ -387,14 +438,16 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
-        excerpt
-        fields {
-          slug
-        }
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          description
+          numSessions
+          price
+          hero_image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }
