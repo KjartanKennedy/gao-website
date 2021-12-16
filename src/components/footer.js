@@ -47,8 +47,8 @@ const Footer = ({}) => {
 
         <div class="email-list-column">
           <p class="spacing-x-small">
-            Want to hear about new classes, something, and another thing? Sign
-            up for our emails!
+            Want to hear about new classes, workshops, and more? Sign up for our
+            emails!
           </p>
           <EmailForm />
         </div>

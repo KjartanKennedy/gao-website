@@ -27,7 +27,7 @@ h2 {
   font-size: 36px;
   line-height: 44px;
 
-  background: linear-gradient(116.36deg, #ba61d0 0%, #111d87 100%);
+  background: linear-gradient(116.36deg, #e85618 0%, #f31b83 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -64,21 +64,38 @@ h4 {
 }
 
 .text-secondary {
-  color: #777;
+  color: #555;
 }
 
 .text-secondary a {
-  color: #777;
+  color: #555;
 }
 
 .emphasis-extreme {
   font-size: 72px;
   line-height: 88px;
   font-weight: 900;
-  background: linear-gradient(116.36deg, #ba61d0 0%, #111d87 100%);
+  background: linear-gradient(116.36deg, #e85618 0%, #f31b83 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 680px) {
+}
+
+@media (max-width: 480px) {
+  body,
+  .text-large {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .center {
@@ -127,6 +144,34 @@ section.no-padding,
   overflow: hidden;
 }
 
+@media (max-width: 1199px) {
+  section,
+  .section-wrap {
+    padding: 80px 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  section,
+  .section-wrap {
+    padding: 80px 80px;
+  }
+}
+
+@media (max-width: 680px) {
+  section,
+  .section-wrap {
+    padding: 40px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  section,
+  .section-wrap {
+    padding: 40px 24px;
+  }
+}
+
 /* SPACING */
 
 .spacing-x-large {
@@ -153,6 +198,18 @@ section.no-padding,
   margin-bottom: 4px !important;
 }
 
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 680px) {
+}
+
+@media (max-width: 480px) {
+}
+
 /* END SPACING */
 
 /* PADDING */
@@ -177,6 +234,18 @@ section.no-padding,
 
 .padding-right-large {
   padding-right: 40px;
+}
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 680px) {
+}
+
+@media (max-width: 480px) {
 }
 
 /* ASPECT-RATIOS */
@@ -292,6 +361,159 @@ h2.grid-title,
   max-width: 960px;
 }
 
+@media (max-width: 1199px) {
+  .banner {
+    padding: 160px 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .grid-4-by-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    column-gap: 40px;
+    row-gap: 24px;
+  }
+
+  .grid-4-by-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 40px;
+    row-gap: 24px;
+  }
+
+  .grid-2-3-asymmetric {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto;
+    gap: 40px;
+  }
+
+  .grid-title {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  h2.grid-title,
+  .grid-title h2 {
+    font-size: 4vw;
+    line-height: 4.5vw;
+  }
+
+  .classes-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    gap: 40px;
+  }
+
+  .classes-grid .grid-title {
+    grid-column: 1 / span 1;
+  }
+
+  .classes-grid .grid-content {
+    grid-column-start: span 1;
+  }
+
+  .banner {
+    padding: 80px 80px 160px;
+  }
+}
+
+@media (max-width: 680px) {
+  .grid-4-by-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto;
+    column-gap: 40px;
+    row-gap: 24px;
+  }
+
+  .grid-4-by-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    column-gap: 40px;
+    row-gap: 24px;
+  }
+
+  .grid-2-3-asymmetric {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 24px;
+  }
+
+  #today-professionals {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 5;
+  }
+  #job-growth {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 4;
+  }
+
+  #job-growth {
+    margin-bottom: -120px;
+  }
+
+  #pedigree,
+  #mission-desc {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 4;
+  }
+
+  .grid-title {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
+  }
+
+  h2.grid-title,
+  .grid-title h2 {
+    font-size: 10vw;
+    line-height: 12vw;
+  }
+
+  .classes-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 40px;
+  }
+
+  .classes-grid .grid-title {
+    grid-column: 1 / span 1;
+  }
+
+  .classes-grid .grid-content {
+    grid-column-start: span 1;
+  }
+
+  .banner {
+    padding: 80px 40px 160px;
+  }
+
+  .banner-heading.large {
+    font-size: 48px;
+    line-height: 58px;
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 80px 24px 160px;
+  }
+
+  .banner-heading.large {
+    font-size: 48px;
+    line-height: 58px;
+    max-width: 960px;
+  }
+}
+
 aside {
   transform: translateY(-160px);
   /* // background-color: #fff; */
@@ -314,6 +536,10 @@ aside:after {
 }
 
 .shift-down {
+  transform: translateY(80px);
+}
+
+#pedigree {
   transform: translateY(80px);
 }
 
@@ -373,6 +599,16 @@ aside:after {
   height: 24px;
 }
 
+#starting-banner .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#coming-soon-header {
+  text-align: center;
+}
+
 input.email {
   font-family: Inter, sans-serif;
   font-size: 14px;
@@ -387,7 +623,8 @@ input.email {
   height: 100%;
 }
 
-input.email::placeholder {
+input.email::placeholder,
+input.email::first-line {
   font-family: Inter, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -401,7 +638,7 @@ button {
   font-weight: 700;
   padding: 8px 24px;
 
-  background: linear-gradient(116.36deg, #ba61d0 0%, #111d87 100%);
+  background: linear-gradient(116.36deg, #e85618 0%, #f31b83 100%);
   color: #fff;
 
   border: none;
@@ -428,4 +665,51 @@ button {
 #success {
   height: 36px;
   padding: 8px 0px;
+}
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 680px) {
+  #pedigree {
+    transform: translateY(0px);
+  }
+
+  #job-growth {
+  }
+
+  #mission-desc {
+  }
+
+  .company-logo-list {
+    grid-template-columns: fit-content(10%) fit-content(10%);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #starting-banner .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #coming-soon-header {
+    text-align: left;
+  }
+
+  .email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+  }
+
+  .email-form button {
+    margin: 8px 0px;
+  }
 }

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+// import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
@@ -9,7 +9,7 @@ import Person from "../components/person"
 import ClassTile from "../components/classTile"
 import EmailForm from "../components/emailForm"
 
-import davidFredrick from "../images/team/KjartanKennedy.jpg"
+import davidFredrick from "../images/team/DavidFredrick.png"
 import kjartanKennedy from "../images/team/KjartanKennedy.jpg"
 import gregRogers from "../images/team/GregRogers.png"
 
@@ -26,23 +26,23 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
-        <Bio />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+  // if (posts.length === 0) {
+  //   return (
+  //     <Layout location={location} title={siteTitle}>
+  //       <Seo title="All posts" />
+  //       <Bio />
+  //       <p>
+  //         No blog posts found. Add markdown posts to "content/blog" (or the
+  //         directory you specified for the "gatsby-source-filesystem" plugin in
+  //         gatsby-config.js).
+  //       </p>
+  //     </Layout>
+  //   )
+  // }
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Game Academy of the Ozarks" />
 
       <section class="hero-section spacing-x-large">
         <div class="container">
@@ -75,7 +75,7 @@ const BlogIndex = ({ data, location }) => {
             <h3 class="spacing-small">Learn from industry professionals</h3>
             <p>
               Our instructors have worked for and helped students get jobs at
-              major tech companies.
+              major tech companies and game studios.
             </p>
           </div>
           <div class="grid-content">
@@ -88,8 +88,8 @@ const BlogIndex = ({ data, location }) => {
           <div class="grid-content">
             <h3 class="spacing-small">Face-to-face instruction</h3>
             <p>
-              Sessions are taught face-to-face, giving opportunity for tailored
-              instruction.
+              Sessions are taught face-to-face, giving opportunities for
+              tailored instruction and one-on-one assistance.
             </p>
           </div>
           <div class="grid-content">
@@ -180,7 +180,7 @@ const BlogIndex = ({ data, location }) => {
 
         <div class="section-wrap">
           <div class="container grid-2-3-asymmetric">
-            <aside class="">
+            <aside class="" id="job-growth">
               <h3 class="spacing-large">
                 <span class="emphasis-extreme">600%</span>
                 <br />
@@ -205,7 +205,7 @@ const BlogIndex = ({ data, location }) => {
                 than the overall job market.
               </p>
             </aside>
-            <div>
+            <div id="mission-desc">
               <p class="text-large spacing-medium">
                 Our mission is to empower Arkansans to build careers in
                 innovative industries by providing access to inclusive,
@@ -239,7 +239,7 @@ const BlogIndex = ({ data, location }) => {
       </section>
       <section id="team">
         <div class="container grid-2-3-asymmetric">
-          <div class="">
+          <div id="today-professionals">
             <h2 class="spacing-large">
               Today’s professionals lighting the way
             </h2>
@@ -266,7 +266,7 @@ const BlogIndex = ({ data, location }) => {
               />
             </div>
           </div>
-          <div class="shift-down">
+          <div id="pedigree">
             <p class="spacing-small text-large">
               Our team and instructors are made up of active industry
               professionals. We’ve worked for and helped students get jobs at
@@ -323,8 +323,11 @@ const BlogIndex = ({ data, location }) => {
       </section>
       <section class="no-padding hide-overflow" id="contact">
         <div class="banner vertical-padding-x-large" id="starting-banner">
-          <div class="container flex-column-center">
-            <h2 class="center banner-heading weight-700 spacing-medium">
+          <div class="container">
+            <h2
+              class="banner-heading weight-700 spacing-medium"
+              id="coming-soon-header"
+            >
               In-person classes starting early 2022
             </h2>
             <p class="spacing-small">
@@ -363,8 +366,6 @@ const BlogIndex = ({ data, location }) => {
             </a>
             <p class="spacing-medium">
               We are always looking for people or companies to support the
-              accessibility of our mission by contributing to our scholarship
-              fund. We are always looking for people or companies to support the
               accessibility of our mission by contributing to our scholarship
               fund.
             </p>
