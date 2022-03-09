@@ -58,7 +58,7 @@ const BlogIndex = ({ data, location }) => {
             </p>
             <p class="spacing-small">
               <strong>
-                Subscribe to get notified when registration opens in early 2022:
+                Subscribe to get notified when registration opens:
               </strong>
             </p>
             <div>
@@ -328,7 +328,7 @@ const BlogIndex = ({ data, location }) => {
               class="banner-heading weight-700 spacing-medium"
               id="coming-soon-header"
             >
-              In-person classes starting early 2022
+              In-person classes starting soon
             </h2>
             <p class="spacing-small">
               Subscribe to get notified when registration opens:
